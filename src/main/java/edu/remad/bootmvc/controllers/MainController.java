@@ -1,14 +1,14 @@
-package edu.remad.bootmvc;
+package edu.remad.bootmvc.controllers;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/main")
+@RequestMapping("/home")
 public class MainController {
 
 	@RequestMapping("/")
 	public String greeting() {
-		return "hello";
+		return "home";
 	}
 }
