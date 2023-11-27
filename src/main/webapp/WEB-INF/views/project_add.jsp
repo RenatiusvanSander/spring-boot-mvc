@@ -32,6 +32,14 @@
 					<label for="project-name">Name</label> <input type="text"
 						id="project-name" class="form-control" name="name" />
 				</div>
+				
+				<div class="form-group">
+					<label for="project_type">Type</label>
+					<select name="type" class="selectpicker">
+					<option value="single">Single Year</option>
+					<option value="multi">Multi-Year</option>
+					</select>
+				</div>
 
 				<div class="form-group">
 					<label for="sponsor">Sponsor</label> <input id="sponsor"
@@ -51,6 +59,11 @@
 				<div class="form-group">
 					<label for="description">Description</label>
 					<textarea class="form-control" rows="3"></textarea>
+				</div>
+				
+				<div class="form-group">
+					<label for="special">Special</label>
+					<input id="special" name="special" type="checkbox">
 				</div>
 
 				<button type="submit" class="btn btn-default">Submit</button>
