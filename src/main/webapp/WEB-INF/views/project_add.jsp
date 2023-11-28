@@ -58,12 +58,17 @@
 
 				<div class="form-group">
 					<label for="description">Description</label>
-					<textarea class="form-control" rows="3"></textarea>
+					<textarea class="form-control" id="description" name="description" rows="3"></textarea>
 				</div>
 				
 				<div class="form-group">
 					<label for="special">Special</label>
 					<input id="special" name="special" type="checkbox">
+				</div>
+				
+				<div class="form-group">
+					<label for="year">Year</label>
+					<input id="year" name="year" type="text">
 				</div>
 
 				<button type="submit" class="btn btn-default">Submit</button>
