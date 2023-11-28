@@ -6,11 +6,13 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import edu.remad.bootmvc.data.entities.Project;
 import edu.remad.bootmvc.services.ProjectService;
 
 @Controller
@@ -44,10 +46,9 @@ public class ProjectController {
 	}
 	
 	@RequestMapping(value = "/save", method=RequestMethod.POST)
-	public String saveProject(@RequestParam("name") String name, HttpSession session) {
-		System.out.println(name);
-		System.out.println(session.getAttribute("token"));
-		System.out.println("invoking save project");
+	public String saveProject(@ModelAttribute Project project) {
+		System.out.println("invoking save with a modelled project");
+		System.out.println(project);
 		
 		return "project_add";
 	}
