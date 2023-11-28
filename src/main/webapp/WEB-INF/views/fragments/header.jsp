@@ -30,8 +30,8 @@
           				aria-expanded="false">Resources <span class="caret"></span></a>
           		
           			<ul class="dropdown-menu" role="menu">
-            			<li><a href="#">Add</a></li>
-            			<li><a href="#">Find</a></li>
+            			<li><a href="/resource/add">Add</a></li>
+            			<li><a href="/resource/find/">Find</a></li>
           			</ul>
         		
         		</li>
