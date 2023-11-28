@@ -15,15 +15,16 @@ public class ProjectService {
 	private List<Project> projects = new LinkedList<>();
 	
 	public ProjectService() {
-		Project javaProject = createProject("Java project","this is a Java Project");
-		Project javascriptProject = createProject("JavaScript Project", "This is a JavaScript Project");
-		Project htmlProject = createProject("HTML Project", "This is an HTML project");
+		Project javaProject = createProject("Java project","this is a Java Project",1l);
+		Project javascriptProject = createProject("JavaScript Project", "This is a JavaScript Project",2l);
+		Project htmlProject = createProject("HTML Project", "This is an HTML project",3l);
 		
 		this.projects.addAll(Arrays.asList(new Project[] {javaProject, javascriptProject, htmlProject}));
 	}
 
-	private Project createProject(String projectName, String projectDescription) {
+	private Project createProject(String projectName, String projectDescription, long projectId) {
 		Project project = new Project();
+		project.setProjectId(projectId);
 		project.setName(projectName);
 		project.setDescription(projectDescription);
 		
